@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" role="img">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F8F4EC"/><stop offset=".52" stop-color="#D8CCBD"/><stop offset="1" stop-color="#9F8D78"/></linearGradient>
+    <filter id="n"><feTurbulence baseFrequency=".018 .08" numOctaves="4" seed="60"/><feColorMatrix values=".45 0 0 0 0 .38 0 0 0 0 .3 0 0 0 0 0 0 0 .13 0"/></filter>
+  </defs>
+  <rect width="1800" height="900" fill="url(#g)"/>
+  <rect width="1800" height="900" filter="url(#n)"/>
+  <path d="M-60 260c330-90 520 80 820 4 340-86 610-102 1100 12M-70 670c330 75 520-110 870-35 330 70 580 130 1060 28" fill="none" stroke="#6B5C4A" stroke-width="14" opacity=".18"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img">
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D3DDDC"/><stop offset=".58" stop-color="#A4B2B3"/><stop offset="1" stop-color="#7D8E90"/></linearGradient>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <filter id="n"><feTurbulence baseFrequency=".011 .06" numOctaves="5" seed="31"/><feDisplacementMap in="SourceGraphic" scale="16"/></filter>
+  <g filter="url(#n)" fill="none" stroke-linecap="round">
+    <path d="M-20 180c250 60 390-52 650 20 230 64 360 30 610 80" stroke="#F4FAF7" stroke-width="13" opacity=".34"/>
+    <path d="M-40 520c265 42 380-70 610 0 245 74 420 28 660 84" stroke="#66787B" stroke-width="12" opacity=".25"/>
+  </g>
+</svg>

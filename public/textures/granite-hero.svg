@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100" role="img">
+  <defs>
+    <radialGradient id="g" cx=".35" cy=".28" r="1">
+      <stop offset="0" stop-color="#D7D5CF"/>
+      <stop offset=".55" stop-color="#8C8B86"/>
+      <stop offset="1" stop-color="#3B3A37"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".08" numOctaves="4" seed="33"/>
+      <feColorMatrix values=".7 0 0 0 0 .7 0 0 0 0 .7 0 0 0 0 0 0 0 .24 0"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="1100" fill="url(#g)"/>
+  <rect width="1800" height="1100" filter="url(#grain)" opacity=".72"/>
+  <g fill="#232321" opacity=".34">
+    <circle cx="180" cy="180" r="8"/><circle cx="420" cy="310" r="5"/><circle cx="710" cy="140" r="7"/><circle cx="940" cy="460" r="9"/><circle cx="1230" cy="260" r="6"/><circle cx="1520" cy="520" r="8"/><circle cx="1640" cy="190" r="5"/><circle cx="260" cy="780" r="7"/><circle cx="650" cy="900" r="5"/><circle cx="1120" cy="820" r="8"/><circle cx="1460" cy="920" r="6"/>
+  </g>
+</svg>

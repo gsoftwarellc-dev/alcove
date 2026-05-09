@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img">
+  <rect width="1200" height="900" fill="#F7F1E8"/>
+  <filter id="n"><feTurbulence baseFrequency=".018 .09" numOctaves="4" seed="7"/><feColorMatrix values=".6 0 0 0 0 .52 0 0 0 0 .42 0 0 0 0 0 0 0 .13 0"/></filter>
+  <rect width="1200" height="900" filter="url(#n)"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M-20 160c188-40 330 84 525 20 230-75 385-10 715-22" stroke="#C9B99F" stroke-width="9" opacity=".45"/>
+    <path d="M-30 520c240-70 360 70 590 4 210-60 380-82 690 4" stroke="#E1D4C3" stroke-width="15" opacity=".65"/>
+  </g>
+</svg>
