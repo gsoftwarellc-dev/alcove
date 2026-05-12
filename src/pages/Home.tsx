@@ -60,7 +60,7 @@ export function Home() {
         </div>
         <img
           className="texture-shadow aspect-[5/4] w-full rounded-md object-cover"
-          src="/textures/intro-close-up.svg"
+          src="/textures/1.jpeg"
           alt="Close-up warm textured stone wall panel surface"
         />
       </section>
@@ -164,7 +164,7 @@ export function Home() {
           <div className="aspect-[16/10] overflow-hidden rounded-md bg-[#DDD1C3] lg:aspect-[4/3]">
             <img
               className="h-full w-full object-cover"
-              src="/textures/intro-close-up.svg"
+              src="/textures/image_52.png"
               alt="Close-up textured wall panel finish"
             />
           </div>

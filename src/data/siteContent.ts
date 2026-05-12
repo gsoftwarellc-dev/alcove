@@ -27,6 +27,7 @@ export type Collection = {
   description: string
   heroImage: string
   previewDescription: string
+  sampleCta: string
   variants: FinishVariant[]
 }
 
@@ -70,10 +71,11 @@ export const collections: Collection[] = [
     slug: 'travertine',
     name: 'Travertine',
     nickname: 'Ancient Ground',
-    heroImage: '/textures/travertine-hero.svg',
+    heroImage: '/textures/Travertine.png',
     previewDescription: 'Soft mineral warmth with layered, porous movement.',
     description:
       'Formed over centuries by mineral-rich waters, travertine carries the memory of time in every groove. Our Travertine collection brings that ancient warmth indoors — soft, porous, and endlessly layered.',
+    sampleCta: 'Request a Travertine sample',
     variants: [
       {
         slug: 'ivory-vein',
@@ -99,32 +101,17 @@ export const collections: Collection[] = [
           'Where warmth meets restraint. A tone that anchors a space without demanding attention.',
         image: '/textures/smoked-latte.svg',
       },
-      {
-        slug: 'cream-stone',
-        name: 'Cream Stone',
-        tone: 'soft cream with pale mineral movement',
-        moodDescription:
-          'Gentle and bright. A softened stone tone for rooms that need light without starkness.',
-        image: '/textures/cream-stone.svg',
-      },
-      {
-        slug: 'terra-wash',
-        name: 'Terra Wash',
-        tone: 'muted clay beige',
-        moodDescription:
-          'Earthy and warm. A grounded tone with the quiet depth of sunbaked mineral plaster.',
-        image: '/textures/terra-wash.svg',
-      },
     ],
   },
   {
     slug: 'granite',
     name: 'Granite',
     nickname: 'Bedrock',
-    heroImage: '/textures/granite-hero.svg',
+    heroImage: '/textures/Granite.png',
     previewDescription: 'Crystalline character for quiet, grounded interiors.',
     description:
       'Born from volcanic pressure deep beneath the earth, granite is uncompromising in character. The Granite collection brings that raw, crystalline energy to your walls — bold, grounded, and built to last.',
+    sampleCta: 'Request a Granite sample',
     variants: [
       {
         slug: 'ash-fleck',
@@ -150,71 +137,40 @@ export const collections: Collection[] = [
           'Dramatic without being loud. Like a night sky captured in stone.',
         image: '/textures/midnight-grain.svg',
       },
-      {
-        slug: 'silver-dust',
-        name: 'Silver Dust',
-        tone: 'pale silver grey with fine speckling',
-        moodDescription:
-          'Clean, mineral, and refined. A lighter granite expression for airy modern spaces.',
-        image: '/textures/silver-dust.svg',
-      },
-      {
-        slug: 'basalt-speck',
-        name: 'Basalt Speck',
-        tone: 'deep basalt grey with natural flecks',
-        moodDescription:
-          'Strong and architectural. A darker neutral with enough texture to stay organic.',
-        image: '/textures/basalt-speck.svg',
-      },
     ],
   },
   {
-    slug: 'slate',
-    name: 'Slate',
-    nickname: 'The Quarry',
-    heroImage: '/textures/slate-hero.svg',
-    previewDescription: 'Layered surfaces with calm depth and natural drama.',
+    slug: "slate",
+    name: "Slate",
+    nickname: "The Quarry",
+    heroImage: "/textures/Slate.png",
+    previewDescription: "Layered surfaces with calm depth and natural drama.",
     description:
-      'Slate is nature’s most honest material — split cleanly along its layers, revealing a raw face that no two pieces share. Our Slate collection honours that honesty, bringing depth and quiet drama to any wall.',
+      "Slate is nature’s most honest material — split cleanly along its layers, revealing a raw face that no two pieces share. Our Slate collection honours that honesty, bringing depth and quiet drama to any wall.",
+    sampleCta: "Request a Slate sample",
     variants: [
       {
-        slug: 'pale-rift',
-        name: 'Pale Rift',
-        tone: 'light blue-grey',
-        moodDescription: 'Fresh and contemplative. Like the sky just before rain.',
-        image: '/textures/pale-rift.svg',
+        slug: "pale-rift",
+        name: "Pale Rift",
+        tone: "light blue-grey",
+        moodDescription: "Fresh and contemplative. Like the sky just before rain.",
+        image: "/textures/pale-rift.svg",
       },
       {
-        slug: 'graphite-fold',
-        name: 'Graphite Fold',
-        tone: 'medium charcoal with layered texture',
+        slug: "graphite-fold",
+        name: "Graphite Fold",
+        tone: "medium charcoal with layered texture",
         moodDescription:
-          'Textured, tactile, and deeply calming. A wall you’ll want to run your hand across.',
-        image: '/textures/graphite-fold.svg',
+          "Textured, tactile, and deeply calming. A wall you’ll want to run your hand across.",
+        image: "/textures/graphite-fold.svg",
       },
       {
-        slug: 'obsidian-split',
-        name: 'Obsidian Split',
-        tone: 'near-black with natural sheen',
+        slug: "obsidian-split",
+        name: "Obsidian Split",
+        tone: "near-black with natural sheen",
         moodDescription:
-          'The boldest finish in the collection. Stark, striking, and surprisingly serene.',
-        image: '/textures/obsidian-split.svg',
-      },
-      {
-        slug: 'mist-layer',
-        name: 'Mist Layer',
-        tone: 'soft mist grey with cool undertones',
-        moodDescription:
-          'Subtle and easy to live with. A quiet slate tone for calm, balanced rooms.',
-        image: '/textures/mist-layer.svg',
-      },
-      {
-        slug: 'moss-ridge',
-        name: 'Moss Ridge',
-        tone: 'muted green-grey',
-        moodDescription:
-          'Natural and grounded. A softened green-grey that brings slate closer to the landscape.',
-        image: '/textures/moss-ridge.svg',
+          "The boldest finish in the collection. Stark, striking, and surprisingly serene.",
+        image: "/textures/obsidian-split.svg",
       },
     ],
   },

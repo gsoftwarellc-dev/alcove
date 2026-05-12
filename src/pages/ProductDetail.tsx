@@ -63,7 +63,8 @@ export function ProductDetail() {
   useEffect(() => {
     setSelectedVariant(collection?.variants[0])
     setQuantity(1)
-  }, [collection])
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [slug])
 
   if (!collection || !selectedVariant) {
     return <Navigate to="/collections" replace />
@@ -93,45 +94,99 @@ export function ProductDetail() {
           </Link>
 
           <div className="mt-8 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-            <div>
-              <div className="overflow-hidden rounded-md bg-[#F5F0E8]">
+            {/* Left column on desktop */}
+            <div className="flex flex-col">
+              {/* 1. Title block — shows first on mobile, sits in right col on desktop via order */}
+              <div className="order-1 lg:hidden">
+                <p className="text-xs uppercase tracking-[0.3em] text-[#6B5C4A]">
+                  {collection.nickname}
+                </p>
+                <h1 className="mt-3 text-[clamp(2.2rem,10vw,3rem)] font-medium leading-tight text-[#25211D]">
+                  {productName}
+                </h1>
+                <p className="mt-4 text-2xl font-medium text-[#25211D]">
+                  SGD 0.00
+                </p>
+              </div>
+
+              {/* 2. Colour picker — mobile only, appears before image */}
+              <div className="order-2 mt-6 lg:hidden">
+                <p className="text-base font-medium text-[#25211D]">
+                  Colour: {selectedVariant.name}
+                </p>
+                <div className="mt-3 flex flex-wrap gap-3">
+                  {collection.variants.map((variant) => {
+                    const isSelected = variant.slug === selectedVariant.slug
+                    return (
+                      <button
+                        className={`h-10 w-10 rounded-full border transition ${
+                          isSelected
+                            ? 'border-[#25211D] ring-2 ring-[#25211D] ring-offset-2'
+                            : 'border-[#DDD1C3] hover:ring-2 hover:ring-[#C3B4A1] hover:ring-offset-2'
+                        }`}
+                        key={variant.slug}
+                        style={{ backgroundColor: swatchColors[variant.slug] }}
+                        type="button"
+                        aria-label={`Select ${variant.name}`}
+                        title={variant.name}
+                        onClick={() => setSelectedVariant(variant)}
+                      />
+                    )
+                  })}
+                </div>
+                <p className="mt-2 text-sm leading-6 text-[#6B5C4A]">
+                  {selectedVariant.tone}
+                </p>
+              </div>
+
+              {/* 3. Image */}
+              <div className="order-3 mt-6 overflow-hidden rounded-md bg-[#F5F0E8] lg:order-none lg:mt-0">
                 <img
                   className="aspect-square w-full object-cover"
                   src={selectedVariant.image}
                   alt={`${productName} in ${selectedVariant.name}`}
                 />
               </div>
-              <h2 className="mt-6 text-2xl font-medium text-[#25211D]">
-                Product Discrption
-              </h2>
-              <p className="mt-3 text-lg leading-8 text-[#6B5C4A]">
-                {collection.description}
-              </p>
+
+              {/* 4. Description */}
+              <div className="order-4 mt-6 lg:order-none">
+                <h2 className="text-xl font-medium text-[#25211D]">
+                  About this finish
+                </h2>
+                <p className="mt-3 text-base leading-8 text-[#6B5C4A]">
+                  {collection.description}
+                </p>
+              </div>
             </div>
 
+            {/* Right column — desktop only for title/price/pickers/CTAs */}
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-[#6B5C4A]">
-                {collection.nickname}
-              </p>
-              <h1 className="mt-4 text-[clamp(2.35rem,10vw,3.75rem)] font-medium leading-tight text-[#25211D] sm:text-6xl">
-                {productName}
-              </h1>
-              <p className="mt-5 text-2xl font-medium text-[#25211D] sm:text-3xl">
-                SGD 0.00
-              </p>
+              {/* Hidden on mobile, shown on desktop */}
+              <div className="hidden lg:block">
+                <p className="text-xs uppercase tracking-[0.3em] text-[#6B5C4A]">
+                  {collection.nickname}
+                </p>
+                <h1 className="mt-4 text-[clamp(2.35rem,10vw,3.75rem)] font-medium leading-tight text-[#25211D] sm:text-6xl">
+                  {productName}
+                </h1>
+                <p className="mt-5 text-2xl font-medium text-[#25211D] sm:text-3xl">
+                  SGD 0.00
+                </p>
+              </div>
 
               <dl className="mt-8 grid gap-3 text-base text-[#6B5C4A]">
-                <div className="flex flex-col gap-1 border-t border-[#DDD1C3] pt-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                <div className="flex items-start justify-between gap-4 border-t border-[#DDD1C3] pt-3">
                   <dt className="font-medium text-[#25211D]">Category</dt>
-                  <dd className="sm:text-right">{collection.name}</dd>
+                  <dd className="text-right">{collection.name}</dd>
                 </div>
-                <div className="flex flex-col gap-1 border-t border-[#DDD1C3] pt-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                <div className="flex items-start justify-between gap-4 border-t border-[#DDD1C3] pt-3">
                   <dt className="font-medium text-[#25211D]">Plate size</dt>
-                  <dd className="sm:text-right">{plateSizeLabel}</dd>
+                  <dd className="text-right">{plateSizeLabel}</dd>
                 </div>
               </dl>
 
-              <div className="mt-8">
+              {/* Colour picker — desktop only */}
+              <div className="mt-8 hidden lg:block">
                 <p className="text-xl font-medium text-[#25211D]">
                   Colour: {selectedVariant.name}{' '}
                   <span aria-hidden="true">*</span>
@@ -139,7 +194,6 @@ export function ProductDetail() {
                 <div className="mt-4 flex flex-wrap gap-3">
                   {collection.variants.map((variant) => {
                     const isSelected = variant.slug === selectedVariant.slug
-
                     return (
                       <button
                         className={`h-10 w-10 rounded-full border transition ${
@@ -171,9 +225,7 @@ export function ProductDetail() {
                     className="inline-flex h-12 w-12 items-center justify-center text-[#25211D] transition hover:bg-[#F5F0E8]"
                     type="button"
                     aria-label="Decrease quantity"
-                    onClick={() =>
-                      setQuantity((value) => Math.max(1, value - 1))
-                    }
+                    onClick={() => setQuantity((value) => Math.max(1, value - 1))}
                   >
                     <Minus size={18} aria-hidden="true" />
                   </button>
@@ -191,15 +243,21 @@ export function ProductDetail() {
                 </div>
               </div>
 
-              <div className="mt-8">
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <WhatsAppButton
                   className="w-full sm:w-auto"
                   message={`Hello ALCOVE, I am interested in ${productName}, colour ${selectedVariant.name}, quantity ${quantity}.`}
                 >
                   Enquire on WhatsApp
                 </WhatsAppButton>
+                <WhatsAppButton
+                  className="w-full sm:w-auto"
+                  variant="outline"
+                  message={`Hello ALCOVE, I would like to request a ${collection.name} sample.`}
+                >
+                  {collection.sampleCta} →
+                </WhatsAppButton>
               </div>
-
             </div>
           </div>
         </div>

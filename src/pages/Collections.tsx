@@ -1,6 +1,7 @@
 import { ArrowRight, Eye } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Seo } from '../components/Seo'
+import { WhatsAppButton } from '../components/WhatsAppButton'
 import { collections, seo } from '../data/siteContent'
 import type { Collection } from '../data/siteContent'
 import {
@@ -20,8 +21,8 @@ function ProductCard({ collection }: { collection: Collection }) {
       <div className="overflow-hidden rounded-md bg-[#F5F0E8]">
         <img
           className="aspect-square w-full object-cover"
-          src={collection.variants[0].image}
-          alt={`${productName} in ${collection.variants[0].name}`}
+          src={collection.heroImage}
+          alt={`${productName} hero`}
         />
       </div>
 
@@ -78,12 +79,12 @@ export function Collections() {
       <Seo {...seo.collections} path="/collections" />
       <section className="px-5 pb-10 pt-28 sm:px-8 sm:pt-32 lg:pb-14 lg:pt-36">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-[#6B5C4A]">
-            Products
-          </p>
-          <h1 className="mt-5 text-[clamp(3rem,14vw,4.5rem)] font-medium leading-tight text-[#25211D] sm:text-7xl">
-            Flexible wall panels
+          <h1 className="text-[clamp(3rem,14vw,4.5rem)] font-medium leading-tight text-[#25211D] sm:text-7xl">
+            The Collections
           </h1>
+          <p className="mt-5 text-lg leading-8 text-[#6B5C4A] sm:text-xl">
+            Three stories. Nine finishes. One wall.
+          </p>
         </div>
       </section>
 
@@ -92,6 +93,24 @@ export function Collections() {
           {collections.map((collection) => (
             <ProductCard collection={collection} key={collection.slug} />
           ))}
+        </div>
+      </section>
+
+      <section className="border-t border-[#DDD1C3] bg-[#F5F0E8] px-5 py-16 text-center sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-[clamp(1.75rem,6vw,2.75rem)] font-medium leading-tight text-[#25211D]">
+            Seen something you love?
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-[#6B5C4A]">
+            We'd be happy to help you bring it to life.
+          </p>
+          <div className="mt-8 flex justify-center">
+            <WhatsAppButton
+              message="Hello ALCOVE, I'd like to get in touch about your wall panel collections."
+            >
+              Get in Touch on WhatsApp
+            </WhatsAppButton>
+          </div>
         </div>
       </section>
     </>
