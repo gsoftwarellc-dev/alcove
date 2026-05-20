@@ -104,9 +104,6 @@ export function ProductDetail() {
                 <h1 className="mt-3 text-[clamp(2.2rem,10vw,3rem)] font-medium leading-tight text-[#25211D]">
                   {productName}
                 </h1>
-                <p className="mt-4 text-2xl font-medium text-[#25211D]">
-                  SGD 0.00
-                </p>
               </div>
 
               {/* 2. Colour picker — mobile only, appears before image */}
@@ -169,9 +166,6 @@ export function ProductDetail() {
                 <h1 className="mt-4 text-[clamp(2.35rem,10vw,3.75rem)] font-medium leading-tight text-[#25211D] sm:text-6xl">
                   {productName}
                 </h1>
-                <p className="mt-5 text-2xl font-medium text-[#25211D] sm:text-3xl">
-                  SGD 0.00
-                </p>
               </div>
 
               <dl className="mt-8 grid gap-3 text-base text-[#6B5C4A]">

@@ -33,7 +33,7 @@ function ProductCard({ collection }: { collection: Collection }) {
         <h2 className="mt-3 text-2xl font-medium leading-tight text-[#25211D] sm:text-3xl">
           {productName}
         </h2>
-        <p className="mt-4 text-2xl font-medium text-[#25211D]">SGD 0.00</p>
+
 
         <dl className="mt-6 grid gap-3 text-base text-[#6B5C4A]">
           <div className="flex items-start justify-between gap-4 border-t border-[#DDD1C3] pt-3">
