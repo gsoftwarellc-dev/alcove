@@ -11,7 +11,7 @@
   --alcove-border: #ddd1c3;
   color: var(--alcove-ink);
   background: var(--alcove-primary);
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -33,7 +33,7 @@ body {
   min-width: 320px;
   min-height: 100svh;
   overflow-x: hidden;
-  font-weight: 400;
+  font-weight: 300;
   background:
     linear-gradient(90deg, rgba(107, 92, 74, 0.04) 1px, transparent 1px),
     var(--alcove-primary);
@@ -57,7 +57,7 @@ img {
 }
 
 .font-display {
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
 }
 
