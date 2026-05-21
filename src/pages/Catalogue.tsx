@@ -168,8 +168,6 @@ function LivingRoom({ v }: { v: VariantMeta }) {
   )
 }
 
-/* ─── Cover page palette strip ─────────────────────────────── */
-const COVER_SWATCHES = allVariants.map(v => v.wallFill)
 
 /* ─── Page: Cover ──────────────────────────────────────────── */
 function CoverPage({ series }: { series?: string }) {
@@ -292,7 +290,6 @@ function CollectionPage({ col, variants }: {
   variants: VariantMeta[]
 }) {
   const accent = COLLECTION_ACCENT[col.slug] ?? '#B8A48E'
-  const isLight = col.slug === 'travertine'
 
   return (
     <div className="page collection-page">
