@@ -18,6 +18,12 @@ export const swatchColors: Record<string, string> = {
   'obsidian-split': '#111313',
   'mist-layer': '#aeb8b7',
   'moss-ridge': '#6d7667',
+  'slate-white': '#f5f5f5',
+  'slate-cream': '#f0e8d0',
+  'slate-yellow': '#d4bc7a',
+  'slate-black': '#0a0a0a',
+  'slate-charcoal': '#1a1a1a',
+  'slate-brown': '#5c2a1a',
 }
 
 export function getProductName(collection: Collection) {

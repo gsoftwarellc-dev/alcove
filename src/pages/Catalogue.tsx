@@ -39,9 +39,12 @@ const VARIANT_COLORS: Record<string, {
   'ash-fleck':        { wallFill: '#D4D4D0', wallFill2: '#C0C0BC', floorFill: '#C4C0B8', sofaFill: '#A8A8A4', strokeColor: '#888880' },
   'iron-mist':        { wallFill: '#B0B4B8', wallFill2: '#909498', floorFill: '#A8ACB0', sofaFill: '#88909A', strokeColor: '#707880' },
   'midnight-grain':   { wallFill: '#3E3E42', wallFill2: '#28282C', floorFill: '#484844', sofaFill: '#606060', strokeColor: '#8888A0' },
-  'pale-rift':        { wallFill: '#C8D2D8', wallFill2: '#AABAC0', floorFill: '#C0C8CE', sofaFill: '#9CAEBC', strokeColor: '#7890A0' },
-  'graphite-fold':    { wallFill: '#6C6C70', wallFill2: '#505054', floorFill: '#686868', sofaFill: '#787880', strokeColor: '#9898A0' },
-  'obsidian-split':   { wallFill: '#282830', wallFill2: '#141418', floorFill: '#303038', sofaFill: '#484858', strokeColor: '#6868808' },
+  'slate-white':      { wallFill: '#F5F5F5', wallFill2: '#E8E8E8', floorFill: '#ECECEC', sofaFill: '#D8D8D8', strokeColor: '#B0B0B0' },
+  'slate-cream':      { wallFill: '#F0E8D0', wallFill2: '#DED0B0', floorFill: '#E8DEC8', sofaFill: '#CCC0A0', strokeColor: '#A89878' },
+  'slate-yellow':     { wallFill: '#D4BC7A', wallFill2: '#BCA058', floorFill: '#CCAC68', sofaFill: '#A88C50', strokeColor: '#907840' },
+  'slate-black':      { wallFill: '#0A0A0A', wallFill2: '#050505', floorFill: '#101010', sofaFill: '#202020', strokeColor: '#404040' },
+  'slate-charcoal':   { wallFill: '#1A1A1A', wallFill2: '#101010', floorFill: '#202020', sofaFill: '#303030', strokeColor: '#505050' },
+  'slate-brown':      { wallFill: '#5C2A1A', wallFill2: '#3E1A0E', floorFill: '#4A2014', sofaFill: '#6A3020', strokeColor: '#884040' },
 }
 
 const allVariants: VariantMeta[] = collections.flatMap((c) =>
@@ -109,21 +112,12 @@ const VARIANT_ROOM_PHOTO: Record<string, RoomPhoto> = {
   },
 
   /* ── Slate ──────────────────────────────────────────────── */
-  'pale-rift':      {
-    src: '/textures/pale_rift_room.png',
-    filter: 'brightness(1) saturate(1) contrast(1)',
-    tint: 'rgba(0,0,0,0)',
-  },
-  'graphite-fold':  {
-    src: '/textures/graphite_fold_room.png',
-    filter: 'brightness(1) saturate(1) contrast(1)',
-    tint: 'rgba(0,0,0,0)',
-  },
-  'obsidian-split': {
-    src: '/textures/obsidian_split_room.png',
-    filter: 'brightness(1) saturate(1) contrast(1)',
-    tint: 'rgba(0,0,0,0)',
-  },
+  'slate-white':    { src: '/textures/Slate.png', filter: 'brightness(1.05) saturate(0.8) contrast(1)',   tint: 'rgba(0,0,0,0)' },
+  'slate-cream':    { src: '/textures/Slate.png', filter: 'brightness(1) saturate(1) contrast(1)',        tint: 'rgba(210,190,140,0.18)' },
+  'slate-yellow':   { src: '/textures/Slate.png', filter: 'brightness(0.95) saturate(1.2) contrast(1)',   tint: 'rgba(180,150,60,0.22)' },
+  'slate-black':    { src: '/textures/Slate.png', filter: 'brightness(0.12) saturate(0.6) contrast(1.2)', tint: 'rgba(0,0,0,0)' },
+  'slate-charcoal': { src: '/textures/Slate.png', filter: 'brightness(0.22) saturate(0.5) contrast(1.1)', tint: 'rgba(0,0,0,0)' },
+  'slate-brown':    { src: '/textures/Slate.png', filter: 'brightness(0.35) saturate(1.4) contrast(1.1)', tint: 'rgba(80,20,5,0.45)' },
 }
 
 /* ─── Real-photo living room ────────────────────────────────── */
