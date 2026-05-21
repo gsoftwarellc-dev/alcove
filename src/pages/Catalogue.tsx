@@ -112,12 +112,12 @@ const VARIANT_ROOM_PHOTO: Record<string, RoomPhoto> = {
   },
 
   /* ── Slate ──────────────────────────────────────────────── */
-  'slate-white':    { src: '/textures/Slate.png', filter: 'brightness(1.05) saturate(0.8) contrast(1)',   tint: 'rgba(0,0,0,0)' },
-  'slate-cream':    { src: '/textures/Slate.png', filter: 'brightness(1) saturate(1) contrast(1)',        tint: 'rgba(210,190,140,0.18)' },
-  'slate-yellow':   { src: '/textures/Slate.png', filter: 'brightness(0.95) saturate(1.2) contrast(1)',   tint: 'rgba(180,150,60,0.22)' },
-  'slate-black':    { src: '/textures/Slate.png', filter: 'brightness(0.12) saturate(0.6) contrast(1.2)', tint: 'rgba(0,0,0,0)' },
-  'slate-charcoal': { src: '/textures/Slate.png', filter: 'brightness(0.22) saturate(0.5) contrast(1.1)', tint: 'rgba(0,0,0,0)' },
-  'slate-brown':    { src: '/textures/Slate.png', filter: 'brightness(0.35) saturate(1.4) contrast(1.1)', tint: 'rgba(80,20,5,0.45)' },
+  'slate-white':    { src: '/textures/slate-white.png',    filter: 'brightness(1) saturate(1) contrast(1)', tint: 'rgba(0,0,0,0)' },
+  'slate-cream':    { src: '/textures/slate-cream.png',    filter: 'brightness(1) saturate(1) contrast(1)', tint: 'rgba(0,0,0,0)' },
+  'slate-yellow':   { src: '/textures/slate-yellow.png',   filter: 'brightness(1) saturate(1) contrast(1)', tint: 'rgba(0,0,0,0)' },
+  'slate-black':    { src: '/textures/slate-black.png',    filter: 'brightness(1) saturate(1) contrast(1)', tint: 'rgba(0,0,0,0)' },
+  'slate-charcoal': { src: '/textures/slate-charcoal.png', filter: 'brightness(1) saturate(1) contrast(1)', tint: 'rgba(0,0,0,0)' },
+  'slate-brown':    { src: '/textures/slate-brown.png',    filter: 'brightness(1) saturate(1) contrast(1)', tint: 'rgba(0,0,0,0)' },
 }
 
 /* ─── Real-photo living room ────────────────────────────────── */
