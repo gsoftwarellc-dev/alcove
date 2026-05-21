@@ -139,7 +139,8 @@ export function ProductDetail() {
               {/* 3. Image */}
               <div className="order-3 mt-6 overflow-hidden rounded-md bg-[#F5F0E8] lg:order-none lg:mt-0">
                 <img
-                  className="aspect-square w-full object-cover"
+                  className="w-full object-cover"
+                  style={{ aspectRatio: '1/2', imageRendering: 'auto' }}
                   src={selectedVariant.image}
                   alt={`${productName} in ${selectedVariant.name}`}
                 />
