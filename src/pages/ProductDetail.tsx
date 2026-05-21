@@ -137,10 +137,10 @@ export function ProductDetail() {
               </div>
 
               {/* 3. Image */}
-              <div className="order-3 mt-6 overflow-hidden rounded-md bg-[#F5F0E8] lg:order-none lg:mt-0">
+              <div className="order-3 mt-6 flex justify-center rounded-md bg-[#F5F0E8] p-6 lg:order-none lg:mt-0">
                 <img
-                  className="w-full object-cover"
-                  style={{ aspectRatio: '1/2', imageRendering: 'auto' }}
+                  className="rounded-md object-contain"
+                  style={{ maxWidth: '200px', width: '100%' }}
                   src={selectedVariant.image}
                   alt={`${productName} in ${selectedVariant.name}`}
                 />
